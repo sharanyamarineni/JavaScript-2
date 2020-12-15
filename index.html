@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>Restaurant</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="split left">
+            <h2 style="text-align: center;color: black;">Tables</h2>
+            <div >
+                <form>
+                    <input class="tableSearch" id="searchTable" onclick="searchTables()" type="text" placeholder="Search tables" name="search" >
+                  
+                  </form>            </div>
+            <br><br>
+            <div id="tables">
+                <div class="grid-container">
+                    <div data-toggle="modal" data-target="#myModal" onclick="return order(1)" id="target1" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event,1)" ondragover="return dragOver(event)">Table-1<br>
+                <span id="table-1"></span>
+                </div>
+                    <div data-toggle="modal" data-target="#myModal" onclick="return order(2)" id="target2" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event,2)" ondragover="return dragOver(event)">Table-2<br>
+                        <span id="table-2"></span>
+                    </div>
+                    <div data-toggle="modal" data-target="#myModal" onclick="return order(3)" id="target3" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event,3)" ondragover="return dragOver(event)">Table-3<br>
+                        <span id="table-3"></span>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div class="split right"> 
+            <h2 style="text-align: center;color: black;">Menu</h2>
+            <div >
+                <form>
+                    <input class="menuSearch" id="searchMenu" onclick="searchItems()" type="text" placeholder="Search menu" name="search" >
+                 
+                  </form>                </div>
+                <br><br>
+            <div class="grid-container" id="menu">
+            </div>    
+        </div>
+        
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+            
+              <div class="modal-content">
+                <div class="modal-header" id="clos" style="background-color: blue">
+                  
+                  
+                </div>
+                <div class="modal-body" id="modal-body">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" id="gen" onclick="generateBill()" >CLOSE SESSION(GENERATE BILL)</button>
+                </div>
+              </div>
+              
+            </div>
+            </div>
+            
+            <div class="modal fade" id="myModal2" role="dialog">
+            <div class="modal-dialog">
+            
+              <div class="modal-content">
+                <div class="modal-header" id="clos2" style="background-color: blue">
+                 
+                  
+                </div>
+                <div class="modal-body" id="modal-body2">
+                </div>
+                
+              </div>
+              
+            </div>
+            </div>
+            
+            
+            
+            
+<!-- <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      Modal content
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Checkout Details</h4>
+        </div>
+        <div class="modal-body2" id="modal-body2">
+         
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+       
+      </div>
+      
+    </div>
+  </div> -->
+        
+        <script type="text/javascript" src="script.js"></script>
+
+    </body>
+</html>
